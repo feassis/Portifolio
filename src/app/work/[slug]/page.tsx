@@ -123,12 +123,12 @@ export default async function Project({
           <Row marginBottom="32" horizontal="center">
             <Row gap="16" vertical="center">
               {post.metadata.play && (
-                <SmartLink href={post.metadata.play} variant="button-primary">
+                <SmartLink href={post.metadata.play}>
                   Play
                 </SmartLink>
               )}
               {post.metadata.git && (
-                <SmartLink href={post.metadata.git} variant="button-secondary">
+                <SmartLink href={post.metadata.git}>
                   Git
                 </SmartLink>
               )}
