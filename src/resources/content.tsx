@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Felipe",
+  lastName: "Assis",
+  name: `Felipe Assis`,
+  role: "Software Developer",
+  avatar: "/images/FelipeAssis.jfif",
+  email: "felipe.assis.2002@gmail.com",
+  location: "America/Sao_Paulo", // IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Portuguese"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -24,17 +24,17 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/feassis",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/felipe-assis-736330134",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Itch.io",
+    icon: "itch",
+    link: "https://feassis.itch.io/",
   },
   {
     name: "Email",
@@ -49,12 +49,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Solving problems through code</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Lares RPG</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -65,14 +65,14 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Felipe, programmer, pixel artist, video and text editor and co-founder of Lares RPG, {" "}
       <Logo
         dark
-        icon="/trademarks/wordmark-dark.svg"
+        icon="/trademarks/Lares - Logo CL BI.png"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      where I program, edit and manage for Lares RPG.
+      <br /> After hours, I build my own projects.
     </>
   ),
 };
@@ -98,9 +98,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Felipe is a game and software developer with a passion for creating engaging and immersive digital experiences. Skilled in Unity, C#, Node.js, TypeScript, and React, he develops gameplay systems, interactive features, and full-stack solutions, integrating art, design, and technology to deliver polished, high-quality experiences.
       </>
     ),
   },
@@ -109,44 +107,57 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance",
+        timeframe: "12-2022 - Present",
+        role: "Programer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Provided code consulting and debugging support for Unity and C# projects, ensuring clean, maintainable, and scalable solutions.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Supported cross-platform builds and publishing, ensuring projects were properly configured and tested before deployment.
+          </>,
+          <>
+            Collaborated with indie teams and individual developers, adapting to different pipelines, tools, and production needs.
+          </>,
+          <>
+            Integrated third-party tools, SDKs, and APIs, including analytics, monetization, and multiplayer frameworks.
+          </>,
+        ],
+        images: [
+          
+        ],
+      },
+      {
+        company: "Tapps Games",
+        timeframe: "02-2021 - 11-2022",
+        role: "Game Developer",
+        achievements: [
+          <>
+            Contributed to the development of Card Guardians, participating in core gameplay implementation and ensuring a smooth player experience.
+          </>,
+          <>
+            Collaborated in multidisciplinary teams (designers, artists, developers) to deliver features aligned with both creative vision and technical requirements.
+          </>,
+          <>
+            Improved game performance and stability, optimizing memory usage and frame rates across mobile devices.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/tappsgames/card-guardians-banner.png",
+            alt: "Card Guardians Banner",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/tappsgames/beholder.png",
+            alt: "Card Guardians Beholder",
             width: 16,
             height: 9,
           },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
@@ -155,12 +166,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Federal University of ABC",
+        description: <>Studied conputer science, producion  engineering and a minor in science and technology.</>,
       },
     ],
   },
@@ -169,30 +176,23 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "C#",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Main language for Unity development, with experience in scalable code architecture, design patterns, and performance optimization.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "C#",
+            icon: "",
+          },
+          {
+            name: "Unity",
+            icon: "",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+         
         ],
       },
       {
@@ -202,7 +202,7 @@ const about: About = {
         ),
         tags: [
           {
-            name: "JavaScript",
+            name: "TypeScript",
             icon: "javascript",
           },
           {
@@ -216,14 +216,359 @@ const about: About = {
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          
         ],
       },  
+
+      {
+        title: "C++",
+        description: (
+          <>Experience with Unreal Engine, gameplay systems development, and memory/performance optimization in 3D games.</>
+        ),
+        tags: [
+          {
+            name: "C++",
+            icon: "",
+          },
+          {
+            name: "Unreal",
+            icon: "",
+          },
+          {
+            name: "Shaders",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "GDScript",
+        description: (
+          <>Prototyping and implementing simple mechanics in Godot, applying programming logic and OOP concepts.</>
+        ),
+        tags: [
+          {
+            name: "GDscript",
+            icon: "",
+          },
+          {
+            name: "Godot",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Java",
+        description: (
+          <>Application development and strong knowledge of object-oriented programming, also applied to data structures and algorithms.</>
+        ),
+        tags: [
+          {
+            name: "Java",
+            icon: "",
+          },
+          {
+            name: "Spring Boot",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Javascript",
+        description: (
+          <>Development of scripts functionalities for web applications.</>
+        ),
+        tags: [
+          {
+            name: "Javascript",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Typescript",
+        description: (
+          <>Development of scripts functionalities for web applications.</>
+        ),
+        tags: [
+          {
+            name: "Typescript",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Angular JS",
+        description: (
+          <>Building dynamic and interactive user interfaces with basic front-end concept</>
+        ),
+        tags: [
+          {
+            name: "Typescript",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "React",
+        description: (
+          <>Development of modern web applications, component-based UI, and state management.</>
+        ),
+        tags: [
+          {
+            name: "Typescript",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Unity",
+        description: (
+          <>Professional experience developing mobile games and complex systems, SDK integration, optimization, and applying design patterns.</>
+        ),
+        tags: [
+          {
+            name: "C#",
+            icon: "",
+          },
+
+          {
+            name: "Unity",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Unreal",
+        description: (
+          <>Gameplay system development, Blueprints integration, and C++ logic implementation.</>
+        ),
+        tags: [
+          {
+            name: "C++",
+            icon: "",
+          },
+
+          {
+            name: "Unreal",
+            icon: "",
+          },
+          {
+            name: "Blueprint",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Godot",
+        description: (
+          <>Development of small prototypes and experimental games with GDScript.</>
+        ),
+        tags: [
+          {
+            name: "GDScript",
+            icon: "",
+          },
+
+          {
+            name: "Godot",
+            icon: "",
+          },
+          {
+            name: "C#",
+            icon: "",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "GameMaker",
+        description: (
+          <>Prototyping and creation of small 2D projects exploring core mechanics.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      },
+
+      {
+        title: "Git",
+        description: (
+          <>Proficient in version control, team collaboration, branching strategies, code reviews, and continuous integration.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "MVC (Model-View-Controller)",
+        description: (
+          <>Structuring games and systems with clear separation of concerns for easier maintenance.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Service Locator",
+        description: (
+          <>Centralized management of services, frequently applied in Unity projects.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Singleton",
+        description: (
+          <>Used in global management systems such as audio, event handling, and game managers.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Observer Pattern",
+        description: (
+          <>Applied to events and decoupled communication between objects in Unity.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "Object Pooling",
+        description: (
+          <>Performance optimization for mobile games by reducing instantiation and destruction overhead.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      }, 
+
+      {
+        title: "State Machine",
+        description: (
+          <>Implementation for AI systems, combat mechanics, and overall game state management.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      },
+
+      {
+        title: "Command Pattern",
+        description: (
+          <>Flexible and customizable input systems for various game types.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      },
+
+      {
+        title: "SOLID Principles",
+        description: (
+          <>Consistent application of object-oriented programming best practices to maintain clean, modular, and scalable code.</>
+        ),
+        tags: [
+          
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
+        ],
+      },
+
     ],
   },
 };
@@ -249,50 +594,15 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Pixel Art – ${person.name}`,
+  description: `Pixel Art made by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+      src: "/images/gallery/BeachBackGround.png",
       alt: "image",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
     },
   ],
 };
