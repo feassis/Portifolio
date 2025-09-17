@@ -3,6 +3,8 @@ import { baseURL, person } from "@/resources";
 
 export const runtime = "nodejs";
 
+import Image from "next/image";
+
 export async function GET(request: Request) {
   let url = new URL(request.url);
   let title = url.searchParams.get("title") || "Portfolio";
@@ -62,14 +64,9 @@ export async function GET(request: Request) {
             gap: "5rem",
           }}
         >
-          <img
+          <Image 
             src={baseURL + person.avatar}
-            style={{
-              width: "12rem",
-              height: "12rem",
-              objectFit: "cover",
-              borderRadius: "100%",
-            }}
+            alt="Logo" width={100} height={100}
           />
           <div
             style={{
