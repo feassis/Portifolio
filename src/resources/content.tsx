@@ -604,6 +604,26 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "horizontal",
     },
+    {
+      src: "/images/gallery/TreeAndMonkey.png",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/EspeonCopy.png",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Traps.png",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/buttons.png",
+      alt: "image",
+      orientation: "vertical",
+    },
   ],
 };
 

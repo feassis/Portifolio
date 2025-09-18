@@ -1,71 +1,46 @@
 ---
-title: "Create, edit and delete blog posts"
-summary: "Create, edit and delete posts in the blog section of your Magic Portfolio."
-publishedAt: "2025-03-17"
-tag: "Magic Portfolio"
+title: "Building a Virtual RPG Table with RESTful API and SSE"
+summary: "How I designed and implemented a virtual RPG table using a RESTful API architecture combined with Server-Sent Events for real-time communication."
+publishedAt: "2025-09-18"
+tag: "Web Development"
+image: ""
 ---
 
-## Manage posts
+## Introduction
 
-You can create, edit and delete posts by adding, modifying or removing `*.mdx` files in the `src/app/blog/posts` directory.
+In this post, I want to share my experience building a **virtual RPG table** that allows players and game masters to interact dynamically in real time.  
+The project’s backbone is a **RESTful API architecture**, ensuring scalability, maintainability, and clear separation of concerns.
 
-## Frontmatter
+## Why RESTful API?
 
-The frontmatter is used to set the post's metadata: title, description, image, and tags. It's used in the post's page and in meta- and open graph tags.
+Using a RESTful API provided several benefits:
+- A clear and structured way to organize requests.
+- Scalability for handling multiple players and sessions.
+- Easier maintainability by separating backend and frontend responsibilities.
 
-<CodeBlock
-    marginBottom="16"
-    codes={[
-      {
-        code:
-`---
-title: "Arriving to a new milestone in my career"
-publishedAt: "2024-04-08"
-image: "/images/gallery/img-02.jpg"
-summary: "Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path."
-tag: "Journal"
----`,
-        language: "tsx",
-        label: "src/app/blog/posts/post-1.mdx"
-      }
-    ]}
-/>
+This separation, however, came at the **cost of usability in the client-side**, since some interactions became slightly more complex to handle compared to a tightly coupled approach.
 
-## MDX syntax
+## Real-Time Communication with SSE
 
-You can use MDX to write the content of your posts. It helps you write rich and dynamic content with minimal code. Some MDX elements will be automatically transformed to Once UI components to integrate better in the design and add additional functionality.
+To make the system responsive and dynamic, I integrated **Server-Sent Events (SSE)**:
+- The browser uses the **EventSource API** to connect to the server.
+- The data stream uses a **well-defined event format**, making communication efficient.
+- SSE provided a lightweight, robust solution for delivering **real-time updates** without the overhead of constant polling.
 
-## Custom components
+As one author puts it:
 
-You can use custom components in MDX files, but you need to import them first in the `src/components/mdx.tsx` file.
+> *"The combination of the EventSource API in the browser and the well-defined event stream data format is what makes SSE both an efficient and an indispensable tool for handling real-time data in the browser."*
 
-<CodeBlock
-    marginBottom="16"
-    highlight="11-12"
-    codes={[
-      {
-        code:
-`const components = {
-    p: createParagraph as any,
-    h1: createHeading(1) as any,
-    h2: createHeading(2) as any,
-    h3: createHeading(3) as any,
-    h4: createHeading(4) as any,
-    h5: createHeading(5) as any,
-    h6: createHeading(6) as any,
-    img: createImage as any,
-    a: CustomLink as any,
-    Table,
-    CodeBlock,
-};`,
-        language: "tsx",
-        label: "src/components/mdx.tsx"
-      }
-    ]}
-/>
+## Lessons Learned
 
-As you can see, the `Table` and `CodeBlock` components are already imported and available for use. You can add more by simply importing them to this file and passing them to the `components` object.
+- **RESTful APIs** work great as the backbone for interactive systems.  
+- **SSE** is powerful for real-time updates with minimal complexity.  
+- **Frontend and backend separation** improves maintainability, but sometimes impacts usability for the client.  
 
-## Hot reload
+## Conclusion
 
-Hot reload of MDX files is currently not supported, but we're working on it.
+The project confirmed that using a **RESTful API** combined with **SSE** is not only viable but also an **efficient and robust solution** for interactive applications — such as virtual RPG tables.  
+
+---
+
+✨ This was a fun project, and I plan to iterate on it by improving the client experience and exploring additional real-time technologies like **WebSockets** or **GraphQL subscriptions**.
